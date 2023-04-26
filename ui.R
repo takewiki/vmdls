@@ -16,13 +16,6 @@ shinyUI(fluidPage(
   tags$head(
     tags$link(rel = "stylesheet", type = "text/css", href = "index.css")
   ),
-  # tags$head(tags$script(src = "echarts_chart_demo.js")),
-  # tags$head(tags$script(src = "echarts.min_demo.js")),
-  #tags$head(tags$script(src = "jquery.js")),
-  #tags$head(tags$script(src = "jquery.min.js")),
-  #tags$head(tags$script(src = "fontscroll.js")),
-  
-  
     
     # Application title----
     div(class='main',
@@ -34,9 +27,8 @@ shinyUI(fluidPage(
                   daterangepicker(
                     inputId = "daterange",
                     label = "生产周选择器",
-                    start = Sys.Date() - 30, end = Sys.Date(),
-                    style = "width:100%; border-radius:4px",
-                    icon = icon("calendar")
+                    start = Sys.Date() - 30, end = Sys.Date()
+                    
                   )
                
                 )),
@@ -57,7 +49,9 @@ shinyUI(fluidPage(
                 div(class="left-top",
                     div(class="title","管理指标"),
                     div(class="kpi",
-                        echarts4rOutput('kpi')
+                        
+                       fluidRow(column(6,echarts4rOutput('kpi1')),
+                                column(6,echarts4rOutput('kpi2')))
                         )
                     ),
                 div(class="left-bottom",
@@ -69,13 +63,13 @@ shinyUI(fluidPage(
                 div(class="cen-top",
                     div(class="title","生产品类统计表"),
                     div(class="top-bottom fl",
-                        #div(id="chart1",class="allnav")
-                        shinyWidgets::actionBttn(
-                          inputId = 'reset_filter',
-                          label = '重置',color = 'warning',size = 'sm',
-                          icon = icon('redo')
-                        ),
-                        echarts4rOutput('chart')
+                        # div(class="reset",  shinyWidgets::actionBttn(
+                        #   inputId = 'reset_filter',
+                        #   label = '重置',color = 'warning',size = 'sm',
+                        #   icon = icon('redo')
+                        # )),
+                        div(class="chart",echarts4rOutput('chart'))
+                        
                         
                         ))
                 ),
@@ -99,7 +93,9 @@ shinyUI(fluidPage(
                           choiceValues = c("产品","备件"),selected = '产品',
                           status = "warning"
                         )
-                        )
+                        ),
+                    div(class="dt2",dataTableOutput('dt2'),style = "font-size:80%"
+                    )
                     
                     ))
         )))

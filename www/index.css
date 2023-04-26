@@ -129,9 +129,12 @@ ol{
 
 .kpi{
     width: 90%;
-    height: 4rem;
+    height: 14rem;
+    margin-top:4rem;
+    
 }
 
+.dataTables_filter, .dataTables_info { display: none; }
 
 .title{
     width: 90%;
@@ -248,6 +251,8 @@ td{
     overflow: hidden;
    
 }
+
+
 
 
 

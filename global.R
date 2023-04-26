@@ -12,10 +12,16 @@ df_list <- data.frame(
   name = LETTERS,
   value = 1:26,
   value2 = 1:26*2,
-  proportion = 1:26
+  proportion = 1:26*3
 )
 
-kpi <- data.frame(val = c(0.6, 0.5, 0.4))
+data <- df_list %>% 
+  # mutate(date = as.Date(time_hour)) %>% 
+  # filter(data <= as.Date('2013-01-31')) %>% 
+  select(name, value,value2, proportion) %>% 
+  arrange_all()
+
+kpi <- data.frame(val = c(0.95, 0.8, 0.6))
 
 
 rd <- data.frame(
