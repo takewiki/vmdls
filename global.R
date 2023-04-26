@@ -2,6 +2,8 @@ library(echarts4r)
 library(dplyr)
 library(DT)
 library(DTeditCn)
+library(shinyWidgets)
+library(daterangepicker)
 
 DTeditCn::setDTtoCn()
 
@@ -14,6 +16,25 @@ df_list <- data.frame(
 )
 
 kpi <- data.frame(val = c(0.6, 0.5, 0.4))
+
+
+rd <- data.frame(
+  x = c('段永利','龚逸飞','焦仑','李宝荣','李燕','彭美娇','赵聪'),
+  y = c(100,
+        732,
+        150,
+        650,
+        560,
+        194,
+        512),
+  z = c(100,
+        332,
+        150,
+        550,
+        310,
+        194,
+        442)
+)
 
 # 数据标准化
 data <- df_list %>% 
