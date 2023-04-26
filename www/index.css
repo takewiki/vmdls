@@ -1,0 +1,381 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box}
+    
+    
+body{
+    position: relative;
+    width: 100%;
+    height: 100%;   
+    padding:10px;	
+    margin:20px;
+    font-family: "微软雅黑";
+    font-size: 300%;
+    background: url("bg02.png") no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+
+
+.fl{
+    float: left;
+}
+
+/*指标列表*/
+ul{
+    list-style: square;
+}
+
+ol{
+    list-style: circle;
+}
+
+/*客户订单分析*/
+.allnav{
+    height: 100%;
+}
+
+
+/*谷哥滚动条样式*/
+
+::-webkit-scrollbar {width:5px;height:5px;position:absolute}
+
+::-webkit-scrollbar-thumb {background-color:#5bc0de}
+::-webkit-scrollbar-track {background-color:#ddd}
+
+/***/
+
+
+/*头部*/
+
+.header{
+    width: 100%;
+    height: 1.1rem;
+
+}
+
+
+.header-left{
+    width: 25%;
+    height: 1.05rem;
+    text-align: left;
+    line-height: 1.05rem;
+}
+
+
+
+
+.header-center{
+    width: 50%;
+    height: 1.05rem;
+    position: relative;
+}
+
+
+/*数据大屏标题栏设置*/
+
+.header-title{
+    text-align: center;
+    color: rgb(254,196,34);
+    font-size: 100%;
+    margin-top: 0.5rem;
+    text-shadow: 0 0 .3rem #00d8ff;
+    line-height: 1.05rem;
+}
+
+
+
+.header-right{
+     width: 90%;
+    height: 1.05rem;
+    text-align: right;
+    line-height: 1.05rem;
+}
+
+
+.header-bottom{
+    width: calc(100% - .4rem);
+    height: 1.0rem;
+    background: url("header.png") no-repeat;
+    background-size: calc(100% - .2rem) 100%;
+    padding: 0.5rem;
+    margin-top: 1.5rem;
+    margin-left: 1.0rem;
+
+}
+
+
+/*
+内容*/
+.center{
+    padding: .1rem ;
+}
+
+
+.center-left{
+    width: 30%;
+    padding: .1rem;
+}
+
+.left-top{
+    width: 100%;
+    height: 35rem;
+    margin-bottom: 1.5rem;
+    border: 0.02rem solid #217093;
+    position: relative;
+    overflow: hidden;
+}
+
+.kpi{
+    width: 90%;
+    height: 4rem;
+}
+
+
+.title{
+    width: 90%;
+    height: 1rem;
+    position: relative;
+    font-size: 2.0rem;
+    top:1.2rem;
+    left: .55rem;
+    color: rgb(254,196,34);
+    padding-left: 1.0rem;
+    line-height: 1.0rem;
+
+}
+.title:before{
+    width: 0.5rem;
+    height: 2.5rem;
+    top: 0.5rem;
+    position: absolute;
+    content: "";
+    background: #59ebe8;
+    border-radius: 0.03rem;
+    left: 0;
+}
+
+.top-list li{
+    float: left;
+    font-size: 2.0rem;
+    color: #ffffff;
+    width: 50%;
+    margin-top:1.5rem;
+
+}
+
+/*针对客户分析做的布局(2,1)*/
+.left-cen{
+    width: 100%;
+    height: 15rem;
+    margin-bottom: 1.5rem;
+    border: 0.1rem solid #217093;
+}
+
+
+
+.left-bottom{
+    width: 234%;
+    height: 20.0rem;
+    /*background: url("../images/panel.png") no-repeat;
+    background-size: 100% 100%;*/
+    border: 0.01rem solid #217093;
+}
+
+th.sorting{
+  color:white;
+  font-size:1.5rem;
+}
+
+label{
+  color:white;
+  font-size:1.5rem;
+}
+
+input{
+  color:red;
+  font-size:1.5rem;
+}
+
+
+.dataTables_info {
+   color:#ffffff;
+  
+  font-size:1.0rem;
+}
+                   
+
+.dt{
+   text-align: center;
+    color: rgb(254,196,34);
+    font-size: 100%;
+    margin-top: 0.5rem;
+    text-shadow: 0 0 .3rem #00d8ff;
+    line-height: .45rem;
+}
+
+
+td{
+   text-align: center;
+    color: rgb(254,196,34);
+    font-size: 10px;
+    margin-top: 0.5rem;
+    text-shadow: 0 0 .3rem #00d8ff;
+    line-height: 0.75rem;
+}
+.bottom-b{
+    width: calc(100% - 0.2rem);
+    height: 27.0rem;
+    margin-left: 0.1rem;
+    margin-top: 0.1rem;
+}
+
+/*中栏设置*/
+
+.center-cen{
+    width: 40%;
+    padding: .1rem;
+}
+
+
+.cen-top{
+    width: 100%;
+    height: 51.5rem;
+    border: 0.01rem solid #217093;
+    margin-bottom: .4rem;
+    position: relative;
+    overflow: hidden;
+   
+}
+
+
+
+.cen-top .top-bottom{
+    width: 100%;
+    height: 49.8rem;
+    position: absolute;
+    margin-top:1.5rem;
+    top:0.2rem;
+    padding: .2rem;
+  
+}
+
+/*设置右边栏*/
+.center-right{
+    width: 30%;
+    padding: .1rem;
+    margin-bottom: .4rem;
+}
+
+.right-top{
+    width: 100%;
+    height: 20rem;
+    margin-bottom: 1.5rem;
+    border: 0.01rem solid #217093;
+}
+.right-cen{
+    width: 100%;
+    height: 30.0rem;
+    margin-bottom: 1.5rem;
+    border: 0.01rem solid #217093;
+}
+.right-bottom{
+    width: 100%;
+    height: 20.0rem;
+    border: 0.01rem solid #217093;
+    margin-bottom: 1.5rem;
+}
+
+
+.heading{
+    width: 100%;
+    margin-top: 2.5rem;
+}
+.heading span{
+    display: block;
+    float: left;
+    height: .2rem;
+    width: 12.5%;
+    text-align: center;
+    font-size: 0.15rem;
+    font-weight: 600;
+    color: #61d2f7;
+    text-align: center;
+    margin-bottom: .1rem;
+    /* margin-left: .1rem; */
+}
+.heading2{
+    width: 100%;
+    margin-top: 2.5rem;
+}
+.heading2 span{
+    display: block;
+    float: left;
+    height: .2rem;
+    width: 16.5%;
+    text-align: center;
+    font-size: 5px;
+    font-weight: 200;
+    color: #61d2f7;
+    text-align: center;
+    margin-bottom: .1rem;
+    padding-left: 0rem;
+}
+
+
+#FontScroll{
+    width: 100%;
+    height: 2.3rem;
+    overflow: hidden;
+    margin-top: .1rem;
+    margin-left:.1rem;
+    overflow: hidden;
+}
+
+#FontScroll ul li{
+    height: .32rem;
+    width: 100%;
+    color: #ffffff;
+    text-align: center;
+    line-height: .32rem;
+    overflow: hidden;
+    font-size: 0.14rem;
+    padding-left: .1rem;
+}
+
+#FontScroll ul li:hover{
+    box-shadow: -10px 0px 15px #034c6a inset, /*左边阴影*/
+    10px 0px 15px #034c6a inset;
+    cursor: pointer;
+}
+
+
+.fontInner span{
+    display:inline-block;
+    float: left;
+    /*height: 20px;*/
+    width:12.2%;
+    color: #ffffff;
+
+    /*background: red;*/
+
+}
+.fontInner1 span{
+    display:inline-block;
+    float: left;
+    /* height: 20px; */
+    width: 16.2%;
+    color: #ffffff;
+
+    /*background: red;*/
+
+}
+.fontInner span b{
+    display: inline-block;
+    width: .2rem;
+    height: .2rem;
+    border-radius: 0.03rem;
+    color: #ffffff;
+    line-height: .2rem;
+}
