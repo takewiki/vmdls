@@ -18,6 +18,15 @@ body{
 }
 
 
+p{
+    position: relative;
+   
+    font-family: "微软雅黑";
+    font-size: 15px;
+    font-weight:bold;
+}
+
+
 .fl{
     float: left;
 }
@@ -78,10 +87,12 @@ ol{
 .header-title{
     text-align: center;
     color: rgb(254,196,34);
+    width:100%;
     font-size: 100%;
     margin-top: 0.5rem;
+    margin-left:35rem;
     text-shadow: 0 0 .3rem #00d8ff;
-    line-height: 1.05rem;
+    line-height: 2.05rem;
 }
 
 
@@ -100,7 +111,7 @@ ol{
     background: url("header.png") no-repeat;
     background-size: calc(100% - .2rem) 100%;
     padding: 0.5rem;
-    margin-top: 4.2rem;
+    margin-top: 2.2rem;
     margin-left: 2.02rem;
 
 }
@@ -180,7 +191,7 @@ ol{
 
 .left-bottom{
     width: 234%;
-    height: 32.0rem;
+    height: 25.0rem;
     /*background: url("../images/panel.png") no-repeat;
     background-size: 100% 100%;*/
     border: 0.01rem solid #217093;
@@ -202,6 +213,11 @@ input{
 }
 
 
+.menu_reset{
+  margin-top:10rem;
+}
+
+
 .dataTables_info {
    color:#ffffff;
   
@@ -218,6 +234,21 @@ input{
     line-height: .45rem;
 }
 
+
+.dt1{
+  margin-top:0.5rem;
+}
+
+.dt_margin{
+  height:30rem;
+  border:0.5rem;
+  
+}
+
+#reset_filter{
+  margin-top:0.1rem;
+  margin-left:18rem;
+}
 
 td{
    text-align: center;
@@ -278,12 +309,14 @@ td{
     height: 40rem;
     margin-bottom: 1.5rem;
     border: 0.01rem solid #217093;
+    display:inline-block;
 }
 .right-cen{
     width: 100%;
-    height: 32.0rem;
-    margin-bottom: 1.5rem;
+    height: 25.0rem;
+    margin-bottom: 1.0rem;
     border: 0.01rem solid #217093;
+     display:inline-block;
 }
 .right-bottom{
     width: 100%;
@@ -383,4 +416,71 @@ td{
     border-radius: 0.03rem;
     color: #ffffff;
     line-height: .2rem;
+}
+
+
+.sec{
+    width: 100%;
+
+}
+
+.sec-left{
+    width: 20%;
+     border: 0.02rem solid #217093;
+     float:left;
+}
+.sec-left2{
+    width: 20%;
+     border: 0.02rem solid #217093;
+     float:left;
+}
+
+.sec-center{
+    width: 30%;
+    position: relative;
+     border: 0.02rem solid #217093;
+     float:left;
+     clear: none;
+     
+}
+#moStatus-label {
+      float: left;
+      display:block;
+      block-line-height:0.5rem;
+    }
+   
+#moStatus {
+      float: left;
+      margin: 2px 0 0 2px;
+    }
+    
+#overDueType-label {
+      float: left;
+      display:block;
+      block-line-height:0.5rem;
+    }
+   
+#overDueType {
+      float: left;
+    }
+    
+    #daterange-label {
+      float: left;
+      display:block;
+      block-line-height:0.5rem;
+    }
+   
+#daterange {
+      float: left;
+      
+    }
+    
+    
+
+.sec-right{
+    width: 30%;
+     border: 0.02rem solid #217093;
+     float:right;
+    
+   
 }

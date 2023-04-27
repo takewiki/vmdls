@@ -22,32 +22,20 @@ shinyUI(fluidPage(
         # 头部定义-------
         # header---------
         div(class='header',
-            div(class="header-left fl",
-                tagList( 
-                  daterangepicker(
-                    inputId = "daterange",
-                    label = "生产周选择器",
-                    start = Sys.Date() - 30, end = Sys.Date()
-                    
-                  )
-               
-                )),
+        
             div(class="header-center fl",
-                div(class="header-title","域华电子生产看板OverView"),
-                div(class="header-img")),
-            div(class="header-right",   radioGroupButtons(
-              inputId = "moStatus",
-              label = "生产任务单状态",
-              choiceNames = c("全部","下达",'开工','完工','结案'),
-              choiceValues = c("全部","下达",'开工','完工','结案'),selected = '全部',
-              status = "warning",justified = FALSE
-            )),
+                div(class="header-title","     域华电子生产看板OverView"),
+                
+                ),
+            div(class="header-img"),
+         
             div(class="header-bottom fl")
-            ),
+        ),
         div(class="center",style="display: flex;",
             div(class="center-left",
                 div(class="left-top",
                     div(class="title","管理指标"),
+                   
                     div(class="kpi",
                         
                        fluidRow(column(6,echarts4rOutput('kpi1')),
@@ -63,11 +51,7 @@ shinyUI(fluidPage(
                 div(class="cen-top",
                     div(class="title","生产品类统计表"),
                     div(class="top-bottom fl",
-                        # div(class="reset",  shinyWidgets::actionBttn(
-                        #   inputId = 'reset_filter',
-                        #   label = '重置',color = 'warning',size = 'sm',
-                        #   icon = icon('redo')
-                        # )),
+                      
                         div(class="chart",echarts4rOutput('chart'))
                         
                         
@@ -85,21 +69,53 @@ shinyUI(fluidPage(
             div(class="right-cen",
                 div(class="title","逾期列表"),
                 div(class="echart wenzi2",
-                    div(id="FontScroll2", class="myscroll2",
-                        radioGroupButtons(
-                          inputId = "overDueType",
-                          label = "",
-                          choiceNames = c("产品","备件"),
-                          choiceValues = c("产品","备件"),selected = '产品',
-                          status = "warning"
-                        )
-                        ),
                     div(class="dt2",dataTableOutput('dt2'),style = "font-size:80%"
                     )
                     
                     ))
-        )))
-    
+        ))
+        # header---------
+      
+        
+        
+        
+        ),
+  div(class='sec',
+      div(class="sec-left",
+          tagList( 
+            daterangepicker(
+              inputId = "daterange",
+              label = "生产周选择器",
+              start = Sys.Date() - 30, end = Sys.Date()
+              
+            )
+            
+          )),
+      div(class="sec-left2",  
+          div(class="reset_btn",  tags$p('请重新选择产品分组:'),
+              shinyWidgets::actionBttn(
+            inputId = 'reset_filter',
+            label = '重置',color = 'warning',size = 'lg',
+            icon = icon('redo')
+          )) ),
+      
+      div(class="sec-center",   radioGroupButtons(
+        inputId = "moStatus",
+        label = "生产任务单状态:",
+        choiceNames = c("全部","下达",'开工','完工','结案'),
+        choiceValues = c("全部","下达",'开工','完工','结案'),selected = '全部',size = 'lg',
+        status = "warning",justified = FALSE
+      )),
+      div(class='sec-right',radioGroupButtons(
+        inputId = "overDueType",
+        label = "逾期选项:",
+        choiceNames = c("产品逾期","备件逾期"),
+        choiceValues = c("产品逾期","备件逾期"),selected = '产品逾期',size = 'lg',
+        status = "warning"
+      ))
+      
+      
+  )
    
     
 
