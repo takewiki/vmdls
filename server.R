@@ -107,7 +107,7 @@ shinyServer(function(input, output) {
         
         
         rd %>% 
-            e_charts(x) %>%
+            e_charts(x,elementId = 'radar_id') %>%
             e_radar(y, max = 750, name = "计划生产数量") %>%
             e_radar(z, max = 550, name = "实作数量") %>%
             e_tooltip(trigger = "item")%>% e_theme(theme = themes[8])

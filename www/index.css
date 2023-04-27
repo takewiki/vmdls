@@ -258,6 +258,11 @@ td{
     background-color:black;
     line-height: 0.75rem;
 }
+
+
+#radar_id{
+   color: rgb(254,196,34);
+}
 .bottom-b{
     width: calc(100% - 0.2rem);
     height: 27.0rem;
