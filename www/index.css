@@ -253,8 +253,9 @@ input{
 td{
    text-align: center;
     color: rgb(254,196,34);
-    font-size: 10px;
+    font-size: 15px;
     margin-top: 0.5rem;
+    background-color:black;
     line-height: 0.75rem;
 }
 .bottom-b{
