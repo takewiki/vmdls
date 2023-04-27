@@ -46,7 +46,7 @@ shinyServer(function(input, output) {
                 left = 'right', 
                 top = 0
               
-            ) %>%e_tooltip(trigger = "axis")%>%
+            ) %>%e_tooltip(trigger = "axis")%>%e_datazoom() %>%
             e_theme(theme = themes[3])
            
     })
