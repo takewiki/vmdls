@@ -4,49 +4,29 @@ library(DT)
 library(DTeditCn)
 library(shinyWidgets)
 library(daterangepicker)
+library(vmdlspkg)
 
 DTeditCn::setDTtoCn()
 
 # 创建列表数据
-df_list <- data.frame(
-  name = LETTERS,
-  value = 1:26,
-  value2 = 1:26*2,
-  proportion = 1:26*3
-)
+# df_list <- data.frame(
+#   name = LETTERS,
+#   value = 1:26,
+#   value2 = 1:26*2,
+#   proportion = 1:26*3
+# )
+df_list = vmdlspkg::moStat_query()
 
 data <- df_list %>% 
-  # mutate(date = as.Date(time_hour)) %>% 
-  # filter(data <= as.Date('2013-01-31')) %>% 
-  select(name, value,value2, proportion) %>% 
+  select(Fcategory, FPlanQty,FActualQty, FQualifiedQty) %>% 
   arrange_all()
 
 kpi <- data.frame(val = c(0.95, 0.8, 0.6))
 
 
-rd <- data.frame(
-  x = c('段永利','龚逸飞','焦仑','李宝荣','李燕','彭美娇','赵聪'),
-  y = c(100,
-        732,
-        150,
-        650,
-        560,
-        194,
-        512),
-  z = c(100,
-        332,
-        150,
-        550,
-        310,
-        194,
-        442)
-)
+rd <- vmdlspkg::prdLineStat_query()
 
-# 数据标准化
-data <- df_list %>% 
 
-  select(name, value,value2, proportion) %>% 
-  arrange_all()
 
 #主题定义
 themes = c(

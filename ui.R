@@ -43,13 +43,13 @@ shinyUI(fluidPage(
                         )
                     ),
                 div(class="left-bottom",
-                    div(class="title","生产进度追踪表"),
+                    div(class="title","生产进度追踪"),
                     div(class="dt1",dataTableOutput('dt'),style = "font-size:80%"
                     )
                     )),
             div(class="center-cen",
                 div(class="cen-top",
-                    div(class="title","生产品类统计表"),
+                    div(class="title","生产进度汇总"),
                     div(class="top-bottom fl",
                       
                         div(class="chart",echarts4rOutput('chart'))
@@ -67,7 +67,7 @@ shinyUI(fluidPage(
                         ))),
             
             div(class="right-cen",
-                div(class="title","逾期列表"),
+                div(class="title","overDue List"),
                 div(class="echart wenzi2",
                     div(class="dt2",dataTableOutput('dt2'),style = "font-size:80%"
                     )
@@ -86,7 +86,7 @@ shinyUI(fluidPage(
             daterangepicker(
               inputId = "daterange",
               label = "生产周选择器",
-              start = Sys.Date() - 30, end = Sys.Date()
+              start = Sys.Date() - 90, end = Sys.Date(),options = daterangepickerOptions(drops = 'up')
               
             )
             
@@ -110,7 +110,7 @@ shinyUI(fluidPage(
         inputId = "overDueType",
         label = "逾期选项:",
         choiceNames = c("产品逾期","备件逾期"),
-        choiceValues = c("产品逾期","备件逾期"),selected = '产品逾期',size = 'lg',
+        choiceValues = c("overDuePrd","overDueSpareparts"),selected = 'overDuePrd',size = 'lg',
         status = "warning"
       ))
       
