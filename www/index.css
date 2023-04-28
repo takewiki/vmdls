@@ -431,17 +431,20 @@ td{
 
 .sec-left{
     width: 20%;
+    height: 10rem;
      border: 0.02rem solid #217093;
      float:left;
 }
 .sec-left2{
     width: 20%;
+    height: 10rem;
      border: 0.02rem solid #217093;
      float:left;
 }
 
 .sec-center{
     width: 30%;
+    height: 10rem;
     position: relative;
      border: 0.02rem solid #217093;
      float:left;
@@ -478,12 +481,14 @@ td{
 #daterange {
       float: left;
       
+      
     }
     
     
 
 .sec-right{
     width: 30%;
+     height: 10rem;
      border: 0.02rem solid #217093;
      float:right;
     
