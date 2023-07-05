@@ -61,6 +61,7 @@ shinyServer(function(input, output,session) {
     # Create a table with detailed information
     output$dt <- renderDT({
         data =vmdlspkg::moDetail_query(Fcategory = filter_date()) 
+        print(data)
         datatable(
             data, 
             extensions = 'Scroller',

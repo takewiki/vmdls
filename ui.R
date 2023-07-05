@@ -86,7 +86,7 @@ shinyUI(fluidPage(
             daterangepicker(
               inputId = "daterange",
               label = "生产周选择器",
-              start = Sys.Date() - 90, end = Sys.Date(),options = daterangepickerOptions(drops = 'up')
+              start = '2023-03-01', end = Sys.Date(),options = daterangepickerOptions(drops = 'up')
               
             )
             
